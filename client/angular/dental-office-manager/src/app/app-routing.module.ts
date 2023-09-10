@@ -1,0 +1,29 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+import Constants from "./constants/constants";
+import { HomeComponent } from "./components/pages/home/home.component";
+import { ResponseResetPasswordComponent } from "./components/signup-signin/sub-components/response-reset-password/response-reset-password.component";
+import { signedInGuard } from "./guards/signedIn.guard";
+import { UserProfileComponent } from "./components/pages/user-profile/user-profile.component";
+
+const routes: Routes = [
+  { path: "", redirectTo: Constants.ROUTER_URLS.HOME, pathMatch: "full" },
+  { path: Constants.ROUTER_URLS.HOME, component: HomeComponent },
+  { 
+    path: Constants.ROUTER_URLS.USER_PROFILE, 
+    component: UserProfileComponent,
+    canActivate: [signedInGuard]
+  },
+  {
+      path: `${Constants.ROUTER_URLS.RESPONSE_RESET_PASSWORD}/:token`,
+      component: ResponseResetPasswordComponent
+  },
+  { path: "**", redirectTo: Constants.ROUTER_URLS.HOME }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
