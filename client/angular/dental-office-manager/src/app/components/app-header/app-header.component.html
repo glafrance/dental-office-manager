@@ -2,11 +2,8 @@
   <div
     routerLink="/" 
     class="logo-container">
-    <div class="logo-and-text">
-      <img class="logo" src="./assets/images/dental-office-manager-logo.png" >
-      <h3>User <span>Manager</span></h3>
-    </div>
-    <h4 class="slogan"><em>User Management Made Easy</em></h4>
+    <app-dental-office-manager-text></app-dental-office-manager-text>
+    <h4 class="slogan"><em>Superior Dental Practice Management</em></h4>
   </div>
   <div class="menu-container">
     <h3 *ngIf="!signedIn" (click)="onSignupSignin()">Signup/Signin</h3>

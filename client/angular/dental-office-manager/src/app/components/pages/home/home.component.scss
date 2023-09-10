@@ -4,44 +4,117 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 40px;
+  margin-top: 60px;
+  padding-bottom: 50px;
 }
-h2, h4 {
-  margin: 0;
-}
-.title {
-  color: $lightBlue900;
-}
-.features-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 100px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.features-column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.feature {
+.top-text {
   display: flex;
   align-items: center;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 100px;
 }
-.checkmark {
-  transform: scale(1.2);
-  color: $greenA700;
+.top-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.explore {
-  color: white;
+.top-blurb-container,
+.top-pitch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-@media screen and (max-width: 1000px) {
-  // Ensure the home page features display in a single column on narrow screen widths.
-  .features-container {
-    flex-direction: column;
-    gap: 20px;
-  }    
+.top-blurb {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  letter-spacing: 5px;
+  line-height: 50px;
+  color: $blue500;
+}
+.top-pitch-container {
+  margin-top: 50px;
+}
+.top-pitch strong {
+  font-weight: 500;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  line-height: 40px;
+  color: $teal500;
+}
+.home-image-container {
+  position: relative;
+}
+.home-image {
+  background-image: url(/assets/images/stock-photos/iStock-546782742-smiling-family.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 750px;
+  height: 500px;
+}
+.flower {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+}
+.blue1 {
+  top: -40px;
+  left: -40px;
+}
+.yellow1 {
+  top: -40px;
+  right: -50px;
+}
+.pink1 {
+  top: 420px;
+  left: -40px;
+}
+.blue2 {
+  top: 420px;
+  right: -50px;
+}
+.yellow2 {
+  top: 180px;
+  left: -60px;
+}
+.pink2 {
+  top: 180px;
+  right: -60px;
+}
+.blue3 {
+  top: 435px;
+  left: 140px;
+}
+.yellow3 {
+  top: 435px;
+  right: 120px;
+}
+.pink3 {
+  top: 435px;
+  right: 300px;
+}
+.blue4 {
+  top: -60px;
+  right: 130px;
+}
+.yellow4 {
+  top: -60px;
+  left: 140px;
+}
+.blue5 {
+  top: -90px;
+  left: 230px;
+}
+.yellow5 {
+  top: -60px;
+  left: 400px;
+}
+.pink5 {
+  top: -90px;
+  left: 310px;
+}
+.offer-message {
+  font-family: 'Roboto Slab', serif;
+  margin-top: 100px;
+  color: $blue500;
+  letter-spacing: 1.5px;
 }

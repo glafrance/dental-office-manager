@@ -1,0 +1,16 @@
+@import "variables";
+
+p {
+  margin: 0;
+}
+.dental-text,
+.manager-text {
+  color: $teal500;
+}
+.office-text {
+  color: $blue500;
+}
+.dental-text,
+.office-text {
+  margin-right: 10px;
+}
